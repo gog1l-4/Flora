@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flora - Quiz</title>
+  <link rel="stylesheet" href="quiz.css"> <!-- Link to your CSS file -->
+
+    <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <div class="loader"></div>
+
+  <!-- Country and City Selection -->
+  <div class="location-container" id="location-container" style="display: none;">
+    <h2>აირჩიე ქალაქი და უბანი</h2>
+    <label for="country">ქალაქი:</label>
+    <select id="country">
+      <option value="">აირჩიე ქალაქი</option>
+      <option value="USA">თელავი</option>
+      <option value="UK">გურჯაანი</option>
+      <option value="Canada">სიღნაღი</option>
+    </select>
+    
+    <label for="city">უბანი:</label>
+    <select id="city" disabled>
+      <option value="">აირჩიე უბანი</option>
+    </select>
+
+    <button id="start-quiz-button" disabled>დაიწყე ქვიზი</button>
+  </div>
+
+  <!-- Quiz Container -->
+  <div class="quiz-container" id="quiz-container" style="display: none;">
+    <header>
+      <span id="question-number">1/10</span>
+      <span id="timer">30</span>
+      <span id="score">Score: 0</span>
+    </header>
+    <div class="progress-container">
+      <div class="progress-bar" id="progress-bar"></div>
+    </div>
+    <main>
+      <h2 id="question-text">How does Kendrick react to moving objects?</h2>
+      <div class="options">
+        <!-- Radio buttons for answers -->
+      </div>
+    </main>
+    <footer>
+      <button id="next-button">შემდეგი</button>
+    </footer>
+  </div>
+
+  <!-- Scoreboard Container -->
+  <div class="scoreboard-container" id="scoreboard-container" style="display: none;">
+    <h2>Scoreboard</h2>
+    <table id="scoreboard">
+      <thead>
+        <tr>
+          <th>კითვა</th>
+          <th>შენი პასუხი</th>
+          <th>სწორი პასუხი</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Scoreboard data -->
+      </tbody>
+    </table>
+    <button id="restart-button">თავიდან დაწყება</button>
+    <button id="score-button">ქულების ნახვა</button> <!-- New Score Button -->
+    <button id="home-back-button" onclick="window.location.href='index.html';">დაბრუნდი მთავარ გვერძე</button> 
+  </div>
+
+  <script src="quiz.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>

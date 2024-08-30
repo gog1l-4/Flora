@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flora</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/images.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-abs-1.png" media="min-width(768px)">
+  <link rel="preload" as="image" href="./assets/images/hero-abs-2.png" media="min-width(768px)">
+
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <h1>
+        <a href="#" class="logo">Flora</a>
+      </h1>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="navbar-top">
+          <a href="#" class="logo">Flora</a>
+
+          <button class="nav-close-btn" aria-label="Close menu" data-nav-toggler>
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="#home" class="navbar-link" data-nav-toggler>მთავარი</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#category" class="navbar-link" data-nav-toggler>ინფორმაცია</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#quiz" class="navbar-link" data-nav-toggler>ქვიზი</a>
+          </li>
+
+          
+
+        </ul>
+
+      </nav>
+
+      <div class="header-actions">
+
+        <button class="header-action-btn" aria-label="Open search" data-search-toggler>
+          <ion-icon name="search-outline"></ion-icon>
+        </button>
+
+
+        <button class="header-action-btn nav-open-btn" aria-label="Open menu" data-nav-toggler>
+          <ion-icon name="menu-outline"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+
+
+
+
+  <!-- 
+    - #SEARCH BOX
+  -->
+
+  <div class="search-container" data-search-box>
+    <div class="container">
+
+      <button class="search-close-btn" aria-label="Close search" data-search-toggler>
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+
+      <div class="search-wrapper">
+        <input type="search" name="search" placeholder="Search Here..." aria-label="Search" class="search-field">
+
+        <button class="search-submit" aria-label="Submit" data-search-toggler>
+          <ion-icon name="search-outline"></ion-icon>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="hero" id="home" aria-label="hero" style="background-image: url('./assets/images/hero-bg.jpg')">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <p class="section-subtitle">უკეთესია ისწავლო ჩვენთან</p>
+
+            <h2 class="h1 hero-title">გესმოდეს ბუნება ნიშნავს, გახდე მისი ნაწილი</h2>
+
+            <p class="hero-text">
+              გახსოვდეთ გარემოს დაბინძურების შედეგები .
+            </p>
+
+            <a href="#category" class="btn btn-primary">
+              <span class="span">მიიღე ინფორმაცია</span>
+
+              <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+            </a>
+
+          </div>
+
+          <figure class="hero-banner">
+
+            <img src="./assets/images/cartoon-earth-toon-01-removebg.png" width="500" height="500" loading="lazy" alt="hero image"
+              class="w-100">
+
+            <!-- <img src="./assets/images/error.jpg" width="318" height="352" loading="lazy" aria-hidden="true"
+              class="abs-img abs-img-1">
+
+            <img src="./assets/images/error.jpg" width="160" height="160" loading="lazy" aria-hidden="true"
+              class="abs-img abs-img-2"> -->
+
+          </figure>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #CATEGORY
+      -->
+
+      <section class="section category" id="category" aria-label="category">
+        <div class="container">
+
+          <p class="section-subtitle">კატეგორიები</p>
+
+          <h2 class="h2 section-title">მნიშვნელოვანი თემები</h2>
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="category-card" onclick="window.location.href='soil.html';">
+
+                <div class="card-icon">
+                  <p>1</p>
+                </div>
+
+                <div>
+                  <h3 class="h3 card-title">
+                    <a href="#">ნიადაგის დაბინძურება</a>
+                  </h3>
+
+                  <span class="card-meta">3 თემა</span>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="category-card" onclick="window.location.href='Water.html';">
+
+                <div class="card-icon">
+                  <p>2</p>
+                </div>
+
+                <div>
+                  <h3 class="h3 card-title">
+                    <a href="#">წყლის დაბინძურება</a>
+                  </h3>
+
+                  <span class="card-meta">3 თემა</span>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="category-card">
+
+                <div class="card-icon">
+                  <p>3</p>
+                </div>
+
+                <div>
+                  <h3 class="h3 card-title">
+                    <a href="#">ჰაერის დაბინძურება</a>
+                  </h3>
+
+                  <span class="card-meta">3 თემა</span>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="category-card">
+
+                <div class="card-icon">
+                  <p>4</p>
+                </div>
+
+                <div>
+                  <h3 class="h3 card-title">
+                    <a href="#">ადამიანის ჯანმრთელობა</a>
+                  </h3>
+
+                  <span class="card-meta">3 თემა</span>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="category-card">
+
+                <div class="card-icon">
+                  <p>5</p>
+                </div>
+
+                <div>
+                  <h3 class="h3 card-title">
+                    <a href="#">ფლორა და ფაუნა</a>
+                  </h3>
+
+                  <span class="card-meta">3 თემა</span>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="category-card">
+
+                <div class="card-icon">
+                  <p>6</p>
+                </div>
+
+                <div>
+                  <h3 class="h3 card-title">
+                    <a href="#">ენერგიის წარმოება</a>
+                  </h3>
+
+                  <span class="card-meta">3 თემა</span>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #ABOUT
+      -->
+
+      <section class="section about" id="about" aria-label="about">
+        <div class="container">
+
+          <figure class="about-banner">
+            <div class="large-screen-only">
+              <img src="./assets/images/flora-robot.jpg" width="450" height="590" loading="lazy" alt="about banner" class="w-100 about-img">
+            </div>
+
+            <!-- <img src="./assets/images/error.jpg" width="188" height="242" loading="lazy" aria-hidden="true"
+              class="abs-img abs-img-1">
+
+            <img src="./assets/images/error.jpg" width="150" height="200" loading="lazy" aria-hidden="true"
+              class="abs-img abs-img-2"> -->
+
+          </figure>
+
+          <div class="about-content">
+
+            <p class="section-subtitle">ვინ ვარ მე</p>
+
+            <h2 class="h2 section-title">მე ვარ რობოტი რომელიც ზრუნავს გარემოზე</h2>
+
+            <ul class="about-list">
+
+              <li class="about-item">
+
+                <div class="item-icon item-icon-1">
+                  <img src="./assets/images/leaf-1.png" width="30" height="30" loading="lazy" aria-hidden="true">
+                </div>
+
+                <div>
+                  <h3 class="h3 item-title">ეკოლოგიურად სუფთა ინოვაცია</h3>
+
+                  <p class="item-text">
+                მე ვარ რობოტი, რომელიც იყენებს ხელოვნურ ინტელექტს და სენსორებს გარემოს გასაუმჯობესებლად. 
+                  </p>
+                </div>
+
+              </li>
+
+              <li class="about-item">
+
+                <div class="item-icon item-icon-2">
+                  <img src="./assets/images/leaf-2.png" width="30" height="30" loading="lazy" aria-hidden="true">
+                </div>
+
+                <div>
+                  <h3 class="h3 item-title">ინოვაციური ეკოლოგიური გაწმენდა</h3>
+
+                  <p class="item-text">
+                    მე ვარ ეკო-მეგობრული რობოტი, რომელიც იყენებს უახლეს ტექნოლოგიებს პლანეტის დასაცავად.
+                  </p>
+                </div>
+
+              </li>
+
+              <li class="about-item">
+
+                <div class="item-icon item-icon-3">
+                  <img src="./assets/images/leaf-3.png" width="30" height="30" loading="lazy" aria-hidden="true">
+                </div>
+
+                <div>
+                  <h3 class="h3 item-title"> სუფთა გარემო ჩემთან ერთად</h3>
+
+                  <p class="item-text">
+                    მე ვმუშაობ აქტიურად და ვასუფტავებ ქალაქს, რაც ზრდის გარემოს ჯანმრთელობას და ქმნის უფრო მწვანე სივრცეს.
+                  </p>
+                </div>
+
+              </li>
+
+            </ul>
+
+            <a href="#" class="btn btn-primary">
+              <span class="span">იცოდე ჩემს შესახებ მეტი</span>
+
+              <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+            </a>
+
+          </div>
+
+        </div>
+      </section>
+
+      <section class="section about" id="quiz" aria-label="about">
+        <div class="container">
+          <div class="about-content">
+            <p class="section-subtitle">ქვიზი</p>
+            <h2 class="h2 section-title">გამოცადე შენი თავი გარემოს დაცვის საკითხებში</h2>
+            <ul class="about-list">
+              <li class="about-item">
+                <div class="item-icon item-icon-1">
+                  <img src="./assets/images/check-mark-icon-green-0.png" width="30" height="30" loading="lazy" aria-hidden="true">
+                </div>
+                <div>
+                  <h3 class="h3 item-title">აიმაღლებ ცნობიერებას</h3>
+                  <p class="item-text">
+                    ქვიზები ეხმარება ხალხს უკეთ გაიაზრონ გარემოს დაბინძურების,
+                    კლიმატის ცვლილების და სხვა ეკოლოგიური საკითხების მნიშვნელობა. 
+                  </p>
+                </div>
+              </li>
+              <li class="about-item">
+                <div class="item-icon item-icon-2">
+                  <img src="./assets/images/check-mark-icon-green-0.png" width="30" height="30" loading="lazy" aria-hidden="true">
+                </div>
+                <div>
+                  <h3 class="h3 item-title">მიიღებ ინფორმაციას გასართობი ფორმით</h3>
+                  <p class="item-text">
+                    ქვიზები სახალისო და ინტერაქტიული მეთოდია ინფორმაციის გადასაცემად,
+                     რაც ხელს უწყობს ცოდნის უფრო მარტივად ათვისებას
+                  </p>
+                </div>
+              </li>
+              <li class="about-item">
+                <div class="item-icon item-icon-3">
+                  <img src="./assets/images/check-mark-icon-green-0.png" width="30" height="30" loading="lazy" aria-hidden="true">
+                </div>
+                <div>
+                  <h3 class="h3 item-title">მიიღე ფლორა უბანში ქვიზების გამოყენებით</h3>
+                  <p class="item-text">
+                  მიუთითე შენი უბანი სანამ დაიწყებ ქვიზის კეთებას, როდესაც უბნის ქულა ავა 1500ზე უბანს გადაეცემა უფასოდ ფლორა
+                  </p>
+                </div>
+              </li>
+            </ul>
+            <a href="quiz.html" class="btn btn-primary">
+              <span class="span">დაიწყე ქვიზი ახლავე</span>
+              <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+            </a>
+          </div>
+          <figure class="about-banner">
+            <div class="large-screen-only-1">
+            <img src="./assets/images/ქვიზი-01.png" width="500" height="500" loading="lazy" alt="about banner" class="w-100 about-img">
+          </div>
+          </figure>
+        </div>
+      </section>
+
+
+
+  
+    </article>
+  </main>
+
+
+
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="Back to top" data-back-top-btn>
+    <ion-icon name="arrow-up"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

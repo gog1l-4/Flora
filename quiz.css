@@ -1,0 +1,333 @@
+/* Ensure consistent typography and hierarchy */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  flex-direction: column;
+}
+
+/* Main and scoreboard containers styling */
+.quiz-container,
+.scoreboard-container {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 600px; /* Adjust maximum width */
+  margin-top: 15px;
+  padding: 30px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Add specific height and overflow control to prevent fullscreen behavior */
+.scoreboard-container {
+  max-height: 80vh; /* Prevent the container from occupying the full height */
+  overflow-y: auto; /* Allow scrolling if content exceeds the height */
+}
+
+/* Header section with question number, timer, and score */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #eee;
+}
+
+/* Styling for question number, timer, and score elements */
+#question-number,
+#timer,
+#score {
+  font-size: 1.2em;
+  color: #777;
+}
+
+/* Timer element with color transition */
+#timer {
+  color: #e74c3c;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Progress bar container */
+.progress-container {
+  width: 100%;
+  background: #f2f2f2;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 30px 0;
+}
+
+/* Progress bar with width transition */
+.progress-bar {
+  width: 0;
+  height: 10px;
+  background: #0acf83;
+  transition: width 0.5s ease-in-out;
+}
+
+/* Main section with question text */
+main {
+  margin: 30px 0;
+}
+
+/* Question text styling */
+h2 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Options container */
+.options {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-top: 20px;
+}
+
+/* Styling for answer options */
+label {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 15px;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.6s, box-shadow 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Radio input styling */
+input[type="radio"] {
+  margin-right: 12px;
+}
+
+/* Footer section with next button */
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+/* Next and restart buttons styling */
+#next-button,
+#restart-button {
+  background: #0acf83;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 15px 30px;
+  margin-top: 15px;
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect for options */
+.options label:hover {
+  background-color: #e0e0e0;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover effect for progress bar */
+.progress-bar:hover {
+  background-color: #09ca73;
+}
+
+/* Hover effect for next and restart buttons */
+#next-button:hover,
+#restart-button:hover {
+  background-color: #09ca73;
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Scoreboard container and table styling */
+.scoreboard-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Scoreboard table header and cell styling */
+.scoreboard-container th,
+.scoreboard-container td {
+  border: 1px solid #ddd;
+  padding: 19px;
+}
+
+.scoreboard-container th {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+/* Question text and options animation transitions */
+#question-text {
+  transition: opacity 0.4s ease-in-out;
+}
+
+.options label:hover {
+  opacity: 0.9;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .quiz-container,
+  .scoreboard-container {
+      width: 90%;
+      max-width: 90%;
+  }
+
+  h2 {
+      font-size: 1.8em;
+  }
+
+  #next-button,
+  #restart-button
+  #score-button,
+  #home-back-button {
+      padding: 12px 24px;
+      font-size: 1em;
+  }
+
+  .options label {
+      padding: 12px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .quiz-container,
+  .scoreboard-container {
+      padding: 20px;
+  }
+
+  h2 {
+      font-size: 1.6em;
+  }
+
+  #next-button,
+  #restart-button
+  #score-button,
+  #home-back-button {
+      padding: 10px 20px;
+      font-size: 0.9em;
+  }
+
+  .options label {
+      padding: 12px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .quiz-container,
+  .scoreboard-container {
+      padding: 15px;
+  }
+
+  h2 {
+      font-size: 1.4em;
+  }
+
+  #next-button,
+  #restart-button,
+  #score-button,
+  #home-back-button {
+      padding: 8px 16px;
+      font-size: 0.8em;
+  }
+
+  .options label {
+      padding: 10px;
+  }
+}
+
+* Location container styling */
+.location-container {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    padding: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.location-container select, .location-container button {
+    margin-top: 15px;
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+.location-container button {
+    background: #0acf83;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Quiz and scoreboard container styles (already present) */
+/* Add style for Score Button */
+#score-button {
+    background: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+#score-button:hover {
+  background-color: #3498db;
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#home-back-button {
+  background: #6ecd25;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 15px 30px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+#home-back-button:hover {
+  background-color: #6ecd25;
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.loader {
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-radius: 50%;
+  border-top: 8px solid #3498db; /* Blue color */
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+
+/* Spin animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Hide elements initially */
+.location-container, .quiz-container, .scoreboard-container {
+  display: none;
+}
